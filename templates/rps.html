@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хайч, Чулуу, Даавуу</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/" class="back-button">Буцах</a>
+        <h1>Хайч, Чулуу, Даавуу</h1>
+    </header>
+
+    <main class="game-container">
+        <p>Өөрийн сонголтоо хийнэ үү:</p>
+        <div class="rps-choices">
+            <button class="rps-button" data-choice="rock">Чулуу</button>
+            <button class="rps-button" data-choice="paper">Даавуу</button>
+            <button class="rps-button" data-choice="scissors">Хайч</button>
+        </div>
+        <div id="rpsResult" class="rps-result">
+            <p>Таны сонголт: <span id="playerChoice"></span></p>
+            <p>Компьютерын сонголт: <span id="computerChoice"></span></p>
+            <h3 id="gameResult"></h3>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/rps.js') }}"></script>
+</body>
+</html>

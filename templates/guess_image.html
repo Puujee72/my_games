@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зураг Таах</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/" class="back-button">Буцах</a>
+        <h1>Зураг Таах</h1>
+    </header>
+
+    <main class="game-container">
+        <p>Энэ юуны зураг вэ?</p>
+        <img id="gameImage" src="{{ image_path }}" alt="Таах зураг" class="guess-image">
+        <form id="guessImageForm">
+            <input type="text" id="userImageGuess" placeholder="Хариултаа оруулна уу" required>
+            <button type="submit">Таах</button>
+        </form>
+        <p id="imageResult"></p>
+        <button id="nextImageBtn" style="display: none;">Дараагийн зураг</button>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/guess_image.js') }}"></script>
+</body>
+</html>

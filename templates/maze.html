@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Төөрдөг Байшин</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/" class="back-button">Буцах</a>
+        <h1>Төөрдөг Байшин</h1>
+    </header>
+
+    <main class="game-container">
+        <p>Тоглоомыг эхлүүлэхийн тулд "Эхлэх" товчийг дарна уу. Arrows товчлууруудаар хөдөлнө.</p>
+        <div id="mazeContainer">
+            <canvas id="mazeCanvas"></canvas>
+        </div>
+        <div class="maze-controls">
+            <button id="startMazeBtn">Эхлэх</button>
+            <button id="resetMazeBtn" style="display: none;">Дахин эхлэх</button>
+        </div>
+        <p id="mazeMessage"></p>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/maze.js') }}"></script>
+</body>
+</html>

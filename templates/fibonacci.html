@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фибоначчийн Таавар</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/" class="back-button">Буцах</a>
+        <h1>Фибоначчийн Таавар</h1>
+    </header>
+
+    <main class="game-container">
+        <p>Фибоначчийн дарааллын дараагийн тоог олно уу:</p>
+        <div class="fibonacci-sequence">
+            {% for num in sequence %}
+                <span>{{ num }}</span>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            <span>...</span>
+        </div>
+        <form id="fibonacciForm">
+            <input type="number" id="userFibGuess" placeholder="Дараагийн тоог оруулна уу" required>
+            <button type="submit">Шалгах</button>
+        </form>
+        <p id="fibResult"></p>
+        <button id="newFibGameBtn" style="display: none;">Шинэ таавар</button>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/fibonacci.js') }}"></script>
+</body>
+</html>

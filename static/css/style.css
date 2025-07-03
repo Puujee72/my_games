@@ -1,0 +1,199 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+header .back-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .back-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    flex-grow: 1;
+    max-width: 1200px;
+}
+
+.game-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    text-align: center;
+    width: 280px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.play-button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #005f7a;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container input[type="number"],
+.game-container input[type="text"],
+.game-container button {
+    padding: 10px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.game-container button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-container button:hover {
+    background-color: #45a049;
+}
+
+#result, #rpsResult, #imageResult, #fibResult, #mazeMessage {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* RPS Specific Styles */
+.rps-choices {
+    margin-top: 20px;
+}
+
+.rps-button {
+    font-size: 1.1em;
+    padding: 12px 25px;
+    margin: 0 10px;
+}
+
+.rps-result {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.rps-result p {
+    margin: 5px 0;
+}
+
+.rps-result h3 {
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: #008CBA;
+}
+
+/* Guess Image Specific Styles */
+.guess-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Fibonacci Specific Styles */
+.fibonacci-sequence {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #555;
+    font-weight: bold;
+}
+
+.fibonacci-sequence span {
+    padding: 0 5px;
+}
+
+/* Maze Specific Styles */
+#mazeContainer {
+    margin-top: 20px;
+    border: 2px solid #333;
+    background-color: #eee;
+}
+
+#mazeCanvas {
+    display: block;
+    background-color: #eee;
+}
+
+.maze-controls {
+    margin-top: 20px;
+}

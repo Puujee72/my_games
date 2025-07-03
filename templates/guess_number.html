@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Санасан Тоог Таах</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/" class="back-button">Буцах</a>
+        <h1>Санасан Тоог Таах</h1>
+    </header>
+
+    <main class="game-container">
+        <p>1-100 хоорондох тоог таана уу!</p>
+        <form id="guessForm">
+            <input type="number" id="userGuess" min="1" max="100" placeholder="Таамаглал оруулна уу" required>
+            <button type="submit">Таах</button>
+        </form>
+        <p id="result"></p>
+        <button id="resetGame" style="display: none;">Шинээр эхлэх</button>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/guess_number.js') }}"></script>
+</body>
+</html>
